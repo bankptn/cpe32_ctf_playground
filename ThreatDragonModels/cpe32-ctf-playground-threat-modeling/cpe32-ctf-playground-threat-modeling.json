@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "title": "cpe32-ctf-playground-threat-modeling",
+    "owner": "bank"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
