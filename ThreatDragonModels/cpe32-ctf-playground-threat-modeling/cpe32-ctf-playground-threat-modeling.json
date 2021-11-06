@@ -476,7 +476,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "MTLS",
+                      "text": "mTLS",
                       "font-weight": "400",
                       "font-size": "small"
                     }
