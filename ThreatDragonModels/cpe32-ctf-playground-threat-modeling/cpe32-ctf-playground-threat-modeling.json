@@ -1,57 +1,76 @@
 {
   "summary": {
     "title": "cpe32-ctf-playground-threat-modeling",
-    "owner": "bank"
+    "owner": "bankptn"
   },
   "detail": {
     "contributors": [],
     "diagrams": [
       {
-        "title": "STRIDE",
-        "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0,
-        "diagramJson": {
-          "cells": [
-            {
-              "type": "tm.Actor",
-              "size": {
-                "width": 160,
-                "height": 80
+        "cells": [
+          {
+            "position": {
+              "x": 1,
+              "y": 16
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "User"
               },
-              "position": {
-                "x": 1,
-                "y": 16
-              },
-              "angle": 0,
-              "id": "0da09999-9c8b-4c7a-936a-17f6bb05abaf",
-              "z": 1,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "User"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "strokeDasharray": null
               }
             },
-            {
+            "shape": "actor",
+            "zIndex": 1,
+            "id": "0da09999-9c8b-4c7a-936a-17f6bb05abaf",
+            "data": {
+              "name": "User",
+              "description": "",
+              "type": "tm.Actor",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [],
+              "hasOpenThreats": false,
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 311,
+              "y": 15
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Browser"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "process",
+            "zIndex": 2,
+            "id": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe",
+            "data": {
+              "name": "Browser",
+              "description": "",
               "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 311,
-                "y": 15
-              },
-              "angle": 0,
-              "id": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe",
-              "z": 2,
-              "hasOpenThreats": true,
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
               "threats": [
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
@@ -59,7 +78,9 @@
                   "type": "Spoofing",
                   "status": "Open",
                   "severity": "High",
-                  "description": "A generic spoofing threat"
+                  "description": "A generic spoofing threat",
+                  "modelType": "STRIDE",
+                  "id": "674c1fe0-ab20-4aef-8f3d-b7392bc16fdb"
                 },
                 {
                   "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
@@ -67,1112 +88,1477 @@
                   "type": "Tampering",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "A generic tampering threat"
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "1db40db3-3751-4e2b-a8c2-6d992fbd5b48"
                 }
               ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Browser"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 650,
-                "y": 264
-              },
-              "angle": 0,
-              "id": "23b94860-5646-45a9-8628-b99940e9d938",
-              "z": 3,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "High",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Open",
-                  "severity": "High",
-                  "description": "A generic information disclosure threat"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Data Services"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 1262,
-                "y": 263
-              },
-              "angle": 0,
-              "id": "07d33da4-62c2-42f8-bfca-5660b3490ad2",
-              "z": 4,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Open",
-                  "severity": "High",
-                  "description": "A generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "High",
-                  "description": "A generic DoS threat"
-                },
-                {
-                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
-                  "title": "Generic elevation threat",
-                  "type": "Elevation of privilege",
-                  "status": "Open",
-                  "severity": "High",
-                  "description": "A generic elevation threat"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic repudiation threat"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Database\nManagement"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 553,
-                "y": 12
-              },
-              "angle": 0,
-              "id": "3be898dd-f930-49a1-ac80-10a886b5a20c",
-              "z": 5,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Web UI"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 767,
-                "y": 13
-              },
-              "angle": 0,
-              "id": "edbd6837-4dab-4af0-9654-9a941a6ae1c0",
-              "z": 6,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "High",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Proxy Server"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 916,
-                "y": 271
-              },
-              "angle": 0,
-              "id": "09214779-4028-4f42-a6aa-5bbc2cac80ec",
-              "z": 8,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Database Cache"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 1234,
-                "y": 473
-              },
-              "angle": 0,
-              "id": "d23b2423-1571-4134-b8f0-d4ed0738ebac",
-              "z": 9,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Database"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 1523,
-                "y": 273
-              },
-              "angle": 0,
-              "id": "202f6785-a92f-4aac-90b7-168eaeb7258d",
-              "z": 10,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Data Warehouse"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "0da09999-9c8b-4c7a-936a-17f6bb05abaf"
-              },
-              "target": {
-                "id": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
-              },
-              "vertices": [
-                {
-                  "x": 252,
-                  "y": 28
-                }
-              ],
-              "id": "9e21a7f5-c054-457a-ab22-bc538763150d",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.4911094908142272,
-                    "offset": 1.7588560707746563
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "HTTPS Request",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 11,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
-              },
-              "target": {
-                "id": "3be898dd-f930-49a1-ac80-10a886b5a20c"
-              },
-              "vertices": [
-                {
-                  "x": 476,
-                  "y": 28
-                },
-                {
-                  "x": 530,
-                  "y": 45
-                }
-              ],
-              "id": "cb5f55a4-f119-4808-9412-f9829393f6be",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.497237180812643,
-                    "offset": -0.18194232389627366
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "HTTPS Request",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 12,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "3be898dd-f930-49a1-ac80-10a886b5a20c"
-              },
-              "target": {
-                "id": "edbd6837-4dab-4af0-9654-9a941a6ae1c0"
-              },
-              "vertices": [],
-              "id": "49212552-645b-4a8e-b8da-b8b617ab2315",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "mTLS",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 13,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
-              },
-              "target": {
-                "id": "d23b2423-1571-4134-b8f0-d4ed0738ebac"
-              },
-              "vertices": [],
-              "id": "b67edff5-a0fc-4aa2-aa82-38b89e61d1ee",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "ODBC",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 17,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
-              },
-              "target": {
-                "id": "09214779-4028-4f42-a6aa-5bbc2cac80ec"
-              },
-              "vertices": [],
-              "id": "35a98af4-da36-4049-b192-97082455c48c",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "File Transfer",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 18,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "09214779-4028-4f42-a6aa-5bbc2cac80ec"
-              },
-              "target": {
-                "id": "23b94860-5646-45a9-8628-b99940e9d938"
-              },
-              "vertices": [],
-              "id": "62f20667-ab80-4d90-81cb-5f172f866306",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "RESP",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 19,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "3be898dd-f930-49a1-ac80-10a886b5a20c"
-              },
-              "target": {
-                "id": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
-              },
-              "vertices": [
-                {
-                  "x": 476,
-                  "y": 99
-                }
-              ],
-              "id": "8d86bcb0-206c-4701-8696-25b242bf25c7",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "HTTPS Respond",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 22,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
-              },
-              "target": {
-                "id": "0da09999-9c8b-4c7a-936a-17f6bb05abaf"
-              },
-              "vertices": [
-                {
-                  "x": 231,
-                  "y": 92
-                }
-              ],
-              "id": "c4c709c2-8f95-4007-9156-696787405f6a",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.5071208389972733,
-                    "offset": 1.4170518557682297
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "HTTPS Respond",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 23,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 227,
-                "y": 246
-              },
-              "target": {
-                "x": 306,
-                "y": 3
-              },
-              "vertices": [
-                {
-                  "x": 285,
-                  "y": 150
-                }
-              ],
-              "id": "4d10dd77-6806-4b23-b656-e0dcef5790c6",
-              "z": 24,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 669,
-                "y": 254
-              },
-              "target": {
-                "x": 738,
-                "y": 8
-              },
-              "vertices": [
-                {
-                  "x": 727,
-                  "y": 135
-                }
-              ],
-              "id": "3c46ae97-919f-4945-9090-bae60a8b7e76",
-              "z": 25,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Boundary",
-              "smooth": true,
-              "source": {
-                "x": 1192,
-                "y": 5
-              },
-              "target": {
-                "x": 1114,
-                "y": 245
-              },
-              "vertices": [
-                {
-                  "x": 1180,
-                  "y": 132
-                }
-              ],
-              "id": "7305680c-ad7b-4e5c-a499-428d1d0f62d7",
-              "z": 26,
-              "attrs": {}
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 1024,
-                "y": 13
-              },
-              "angle": 0,
-              "id": "8c807563-9c5b-45a1-b851-05f891fc113a",
-              "z": 27,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "API Gateway"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 1263,
-                "y": 12
-              },
-              "angle": 0,
-              "id": "8fa98270-c092-4ceb-8041-b3e8715d58d2",
-              "z": 28,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic repudiation threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                },
-                {
-                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
-                  "title": "Generic elevation threat",
-                  "type": "Elevation of privilege",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic elevation threat"
-                }
-              ],
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Application\nServer"
-                },
-                ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "edbd6837-4dab-4af0-9654-9a941a6ae1c0"
-              },
-              "target": {
-                "id": "8c807563-9c5b-45a1-b851-05f891fc113a"
-              },
-              "vertices": [
-                {
-                  "x": 966,
-                  "y": 62
-                }
-              ],
-              "id": "ddff919f-c726-4b48-98e3-80adbdf6980f",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "mTLS",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 29,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "8c807563-9c5b-45a1-b851-05f891fc113a"
-              },
-              "target": {
-                "id": "8fa98270-c092-4ceb-8041-b3e8715d58d2"
-              },
-              "vertices": [
-                {
-                  "x": 1221,
-                  "y": 60
-                }
-              ],
-              "id": "d25d1a48-921d-4b91-b7fe-d96e2ae80b08",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "ODBC",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 30,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "8fa98270-c092-4ceb-8041-b3e8715d58d2"
-              },
-              "target": {
-                "id": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
-              },
-              "vertices": [],
-              "id": "cd3e9965-89c0-4d09-9e39-203a731ba27c",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "ODBC",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 31,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
-              },
-              "target": {
-                "id": "202f6785-a92f-4aac-90b7-168eaeb7258d"
-              },
-              "vertices": [],
-              "id": "d311bf98-9ef8-4268-a864-f9ca3374f1f9",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "File Transfer",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 32,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
-                  "type": "Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic informtion disclosure threat",
-                  "type": "Information disclosure",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic information disclosure threat"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat"
-                }
-              ],
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasOpenThreats isInScope"
-                }
-              }
+              "hasOpenThreats": true
             }
-          ]
-        },
-        "size": {
-          "height": 1814.387451171875,
-          "width": 1831
-        }
+          },
+          {
+            "position": {
+              "x": 650,
+              "y": 264
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Data Services"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "process",
+            "zIndex": 3,
+            "id": "23b94860-5646-45a9-8628-b99940e9d938",
+            "data": {
+              "name": "Data Services",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "b67a1810-c7b9-4716-935b-1304f3d4dcee"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "A generic information disclosure threat",
+                  "modelType": "STRIDE",
+                  "id": "bb50c7b1-2cd9-4d78-ae70-92e6f8c27f7b"
+                }
+              ],
+              "hasOpenThreats": true
+            }
+          },
+          {
+            "position": {
+              "x": 1262,
+              "y": 263
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Database\nManagement"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "process",
+            "zIndex": 4,
+            "id": "07d33da4-62c2-42f8-bfca-5660b3490ad2",
+            "data": {
+              "name": "Database\nManagement",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "7aa918f8-8e6d-496c-8bdf-60db66305e5d"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "A generic information disclosure threat",
+                  "modelType": "STRIDE",
+                  "id": "2183ccdd-2105-46ca-854b-db2ace89dd89"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "ee52e278-576a-4e5d-9779-8a97e4dd9388"
+                },
+                {
+                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
+                  "title": "Generic elevation threat",
+                  "type": "Elevation of privilege",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "A generic elevation threat",
+                  "modelType": "STRIDE",
+                  "id": "54b0af91-4323-4cd7-afa1-15bb9925d1be"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic repudiation threat",
+                  "modelType": "STRIDE",
+                  "id": "5bdc1415-a805-4866-97e6-9fb354433c44"
+                }
+              ],
+              "hasOpenThreats": true
+            }
+          },
+          {
+            "position": {
+              "x": 553,
+              "y": 12
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Web UI"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "process",
+            "zIndex": 5,
+            "id": "3be898dd-f930-49a1-ac80-10a886b5a20c",
+            "data": {
+              "name": "Web UI",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "159b7879-a8e6-47e4-95c4-b1a9c260df33"
+                }
+              ],
+              "hasOpenThreats": true
+            }
+          },
+          {
+            "position": {
+              "x": 767,
+              "y": 13
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Proxy Server"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "process",
+            "zIndex": 6,
+            "id": "edbd6837-4dab-4af0-9654-9a941a6ae1c0",
+            "data": {
+              "name": "Proxy Server",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "af42c7c9-36c9-43f8-ba7c-668557919332"
+                }
+              ],
+              "hasOpenThreats": true
+            }
+          },
+          {
+            "position": {
+              "x": 916,
+              "y": 271
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Database Cache"
+              },
+              "topLine": {
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "store",
+            "id": "09214779-4028-4f42-a6aa-5bbc2cac80ec",
+            "zIndex": 8,
+            "data": {
+              "name": "Database Cache",
+              "description": "",
+              "type": "tm.Store",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [],
+              "hasOpenThreats": false,
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false
+            }
+          },
+          {
+            "position": {
+              "x": 1234,
+              "y": 473
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Database"
+              },
+              "topLine": {
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "store",
+            "id": "d23b2423-1571-4134-b8f0-d4ed0738ebac",
+            "zIndex": 9,
+            "data": {
+              "name": "Database",
+              "description": "",
+              "type": "tm.Store",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [],
+              "hasOpenThreats": false,
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false
+            }
+          },
+          {
+            "position": {
+              "x": 1523,
+              "y": 273
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Data Warehouse"
+              },
+              "topLine": {
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "store",
+            "id": "202f6785-a92f-4aac-90b7-168eaeb7258d",
+            "zIndex": 10,
+            "data": {
+              "name": "Data Warehouse",
+              "description": "",
+              "type": "tm.Store",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [],
+              "hasOpenThreats": false,
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "4891d49b-fa58-4001-ab81-864fb7278b24"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "1611cdb7-ce17-4c24-b3ce-6378a97e598b"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "d22f8b38-21fe-4268-a488-ca173ed42e86",
+            "labels": [
+              {
+                "position": {
+                  "distance": 0.4911094908142272,
+                  "offset": 1.7588560707746563
+                },
+                "attrs": {
+                  "label": {
+                    "text": "HTTPS Request"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "0da09999-9c8b-4c7a-936a-17f6bb05abaf"
+            },
+            "target": {
+              "cell": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
+            },
+            "vertices": [
+              {
+                "x": 252,
+                "y": 28
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "e5703dcf-edf3-4509-ae42-ab1c0260c56d"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "68f1040a-9b16-40ac-9cd6-ba5b96ac283b",
+            "labels": [
+              {
+                "position": {
+                  "distance": 0.497237180812643,
+                  "offset": -0.18194232389627366
+                },
+                "attrs": {
+                  "label": {
+                    "text": "HTTPS Request"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
+            },
+            "target": {
+              "cell": "3be898dd-f930-49a1-ac80-10a886b5a20c"
+            },
+            "vertices": [
+              {
+                "x": 476,
+                "y": 28
+              },
+              {
+                "x": 530,
+                "y": 45
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "mTLS",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "8562c023-44d9-483c-9da3-1dfb27e88cc4"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "91eb25dd-a520-488f-a2b9-9c94a335d993"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "92d9ba68-ccee-4d92-bf1c-9fb1e8e1e406",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "mTLS"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "3be898dd-f930-49a1-ac80-10a886b5a20c"
+            },
+            "target": {
+              "cell": "edbd6837-4dab-4af0-9654-9a941a6ae1c0"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ODBC",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "f5a681e3-06b7-473a-8d1f-23008cd2ee75"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat",
+                  "modelType": "STRIDE",
+                  "id": "a8facf82-66d1-48bc-b67e-b00a120b94ee"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "c54128bb-6dfe-47a3-9c1f-16c22302b0bd"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "c67aef68-d347-40eb-809f-ec31d891abdf",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "ODBC"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
+            },
+            "target": {
+              "cell": "d23b2423-1571-4134-b8f0-d4ed0738ebac"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "File Transfer",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "fbd3f0ce-b624-4f3d-9622-fc11493d9f13"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat",
+                  "modelType": "STRIDE",
+                  "id": "35fde08e-15f0-40ec-8219-b7cafb84af2c"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "0f623c36-28a5-4d1a-91d6-79c842ec8b0c"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "be506614-a360-4a15-aaf3-907398a29d5f",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "File Transfer"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
+            },
+            "target": {
+              "cell": "09214779-4028-4f42-a6aa-5bbc2cac80ec"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "RESP",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "8c39f8b8-a435-41ca-862c-85bf3c9d0e79"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "de4d9f4c-38bd-42ab-a6bd-3850ea1d13ce"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "33d467e8-c6fb-432a-a86f-a52f0f0e2f79",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "RESP"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "09214779-4028-4f42-a6aa-5bbc2cac80ec"
+            },
+            "target": {
+              "cell": "23b94860-5646-45a9-8628-b99940e9d938"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS Respond",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            },
+            "id": "133a1652-5639-4b67-a196-c46f08d72714",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "HTTPS Respond"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "3be898dd-f930-49a1-ac80-10a886b5a20c"
+            },
+            "target": {
+              "cell": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
+            },
+            "vertices": [
+              {
+                "x": 476,
+                "y": 99
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS Respond",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            },
+            "id": "32259d17-d560-4b20-b277-cb89fa65fef6",
+            "labels": [
+              {
+                "position": {
+                  "distance": 0.5071208389972733,
+                  "offset": 1.4170518557682297
+                },
+                "attrs": {
+                  "label": {
+                    "text": "HTTPS Respond"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "9c1bd6d2-e3f4-4bd9-b4d5-6fcd693dd1fe"
+            },
+            "target": {
+              "cell": "0da09999-9c8b-4c7a-936a-17f6bb05abaf"
+            },
+            "vertices": [
+              {
+                "x": 231,
+                "y": 92
+              }
+            ]
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "attrs": {
+              "line": {
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "labels": [
+              {
+                "attrs": {
+                  "text": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "5356393b-5c62-4456-aded-b07c05fb55ad",
+            "source": {
+              "x": 227,
+              "y": 246
+            },
+            "target": {
+              "x": 306,
+              "y": 3
+            },
+            "vertices": [
+              {
+                "x": 285,
+                "y": 150
+              }
+            ]
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "attrs": {
+              "line": {
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "labels": [
+              {
+                "attrs": {
+                  "text": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "4fb53987-9ecc-4992-93fd-8fc3b345727a",
+            "source": {
+              "x": 669,
+              "y": 254
+            },
+            "target": {
+              "x": 738,
+              "y": 8
+            },
+            "vertices": [
+              {
+                "x": 727,
+                "y": 135
+              }
+            ]
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "attrs": {
+              "line": {
+                "targetMarker": "",
+                "sourceMarker": ""
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "labels": [
+              {
+                "attrs": {
+                  "text": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "785a94a6-2041-49e0-af2e-b7360793c6e5",
+            "source": {
+              "x": 1192,
+              "y": 5
+            },
+            "target": {
+              "x": 1114,
+              "y": 245
+            },
+            "vertices": [
+              {
+                "x": 1180,
+                "y": 132
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "mTLS",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "a12c31c0-663a-4952-b9e7-87664d8afd8c"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "a5b67911-c0e9-459c-815f-ea926c3f79cc"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "5d958d7f-4a6c-42e1-b26a-5fe86b9b77ec",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "mTLS"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "edbd6837-4dab-4af0-9654-9a941a6ae1c0"
+            },
+            "target": {
+              "cell": "8c807563-9c5b-45a1-b851-05f891fc113a"
+            },
+            "vertices": [
+              {
+                "x": 966,
+                "y": 62
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ODBC",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "9338dd7f-8aa2-4a05-877b-12514c3399fa"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "745b71a8-a3db-4e93-be06-f27248b5d47e"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "8da9d1ca-f38f-4e8e-b2f2-bd24517616e3",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "ODBC"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "8c807563-9c5b-45a1-b851-05f891fc113a"
+            },
+            "target": {
+              "cell": "8fa98270-c092-4ceb-8041-b3e8715d58d2"
+            },
+            "vertices": [
+              {
+                "x": 1221,
+                "y": 60
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "ODBC",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "9a7a21de-64bb-492d-b2e2-ca6cc14b9c83"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat",
+                  "modelType": "STRIDE",
+                  "id": "ba7784ee-da27-4a44-8c85-2a1e4861c58c"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "b5527b24-ff25-4ab4-b5db-8e3f2f562520"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "b312f762-1c0e-4d92-8317-2934a2a2807c",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "ODBC"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "8fa98270-c092-4ceb-8041-b3e8715d58d2"
+            },
+            "target": {
+              "cell": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "File Transfer",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "24990c5a-73b6-4f44-adf8-1e9ab255e7c2"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat",
+                  "modelType": "STRIDE",
+                  "id": "395d4451-7ae7-46b5-8fe8-1db1d31de129"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "e128ff66-6c86-4bd9-9125-7d4e7039a095"
+                }
+              ],
+              "isTrustBoundary": false
+            },
+            "id": "a08a00b1-64a9-40fc-b572-fdaca7070552",
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "File Transfer"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "cell": "07d33da4-62c2-42f8-bfca-5660b3490ad2"
+            },
+            "target": {
+              "cell": "202f6785-a92f-4aac-90b7-168eaeb7258d"
+            },
+            "vertices": []
+          },
+          {
+            "position": {
+              "x": 1024,
+              "y": 13
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "API Gateway"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "process",
+            "zIndex": 27,
+            "id": "8c807563-9c5b-45a1-b851-05f891fc113a",
+            "data": {
+              "name": "API Gateway",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "8a4ed9f2-51b0-414a-a4da-cf4b13d0e726"
+                }
+              ],
+              "hasOpenThreats": true
+            }
+          },
+          {
+            "position": {
+              "x": 1263,
+              "y": 12
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Application\nServer"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 3,
+                "strokeDasharray": null
+              }
+            },
+            "shape": "process",
+            "zIndex": 28,
+            "id": "8fa98270-c092-4ceb-8041-b3e8715d58d2",
+            "data": {
+              "name": "Application\nServer",
+              "description": "",
+              "type": "tm.Process",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat",
+                  "modelType": "STRIDE",
+                  "id": "51960d5f-63cc-4f6c-a96a-91a352035e8f"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic repudiation threat",
+                  "modelType": "STRIDE",
+                  "id": "04e64dd0-f0b6-45e5-a95a-59c98c57eab2"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat",
+                  "modelType": "STRIDE",
+                  "id": "9750b995-c74c-46e6-9f99-d8a8106d9770"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic DoS threat",
+                  "modelType": "STRIDE",
+                  "id": "c67b63fc-80ca-40a2-87bd-6a2cbe641202"
+                },
+                {
+                  "ruleId": "c1377855-ea20-4c97-8861-f95c364fb8d2",
+                  "title": "Generic elevation threat",
+                  "type": "Elevation of privilege",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic elevation threat",
+                  "modelType": "STRIDE",
+                  "id": "045ccb35-70b0-4f52-9ff8-d13d86ab4de3"
+                }
+              ],
+              "hasOpenThreats": true
+            }
+          }
+        ],
+        "version": "2.0",
+        "title": "STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
       }
-    ]
-  }
+    ],
+    "reviewer": "bankptn"
+  },
+  "version": "2.0"
 }
